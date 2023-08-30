@@ -1,0 +1,122 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;   
+    color: #FFEEF4;
+}
+
+.header-title {
+    background-color: #AEC3AE;
+    text-align: center;
+    padding: 2rem 0rem;
+    box-shadow: 3px 3px 2px 1px #000;
+    position: relative;
+    z-index: 2;
+}
+
+.header-title > h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 175);
+}
+
+.header-title > p {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+main {
+    background-color: #94A684;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input,
+button {
+    -moz-appearance: none;
+    background: transparent;
+    border:none;
+    font-size: 2em;
+}
+
+input:focus {
+    outline: none;
+}
+
+input.main-input {
+    border-radius: 0.5rem;
+    background-color: #AEC3AE;
+    padding: 1rem;
+}
+
+.number-input {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.number-input::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 3px solid #FFEEF4;
+    border-radius: 0.5rem;
+    opacity: 0;
+    outline: none;
+    width: 0%;
+    transition: all 1.5s;
+}
+
+button.confirm-btn {
+    background-color: #AEC3AE;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    transition: all .25s;
+    outline-style: solid;
+    outline-color: transparent;
+    margin-left: 3rem;
+}
+
+button.confirm-btn:hover {
+    background-color: hsl(120, 15%, 68%);
+    box-shadow: 0 0 0 4px hsl(120, 15%, 50%);
+}
+
+.decimal-output {
+    color: #000;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.answer-title {
+    margin-right: 2rem;
+}
+
+.answer-detail {
+    position: relative;
+    left: -100px;
+    opacity: 0;
+}
+
+.animation {
+    animation: fadeInAnswer 2s 1 forwards;
+}
+
+@keyframes fadeInAnswer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100;
+        left: 0;
+    }
+}
+
